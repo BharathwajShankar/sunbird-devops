@@ -14,11 +14,11 @@ repository: {{assessment_repository|default('assessment-service')}}
 image_tag: {{ image_tag }}
 resources:
   requests:
-    cpu: {{assessment_cpu_req|default('50m')}}
-    memory: {{assessment_mem_req|default('50Mi')}}
+    cpu: {{assessment_cpu_req|default('100m')}}
+    memory: {{assessment_mem_req|default('100Mi')}}
   limits:
     cpu: {{assessment_cpu_limit|default('1')}}
-    memory: {{assessment_mem_limit|default('500Mi')}}
+    memory: {{assessment_mem_limit|default('1024Mi')}}
 network:
   port: 9003
   targetport: 9000
